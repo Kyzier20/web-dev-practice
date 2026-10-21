@@ -46,3 +46,22 @@ button.addEventListener("click", function() {
     message.textContent = 
     "You're officially using JavaScript!";
 });
+document.querySelector("#message");
+const card = document.querySelector(".card");
+
+const ageInput = document.querySelector("#age");
+
+const age = ageInput.value;
+const age = Number(ageInput.value);
+
+
+if(age >= 18) {
+    console.log("You are an adult.");
+} else {
+    console.log("You are a minor.");
+}
+Number("123"); // returns 123
+Number("123") == 123; // true
+
+Number("unicorn"); // NaN
+Number(undefined); // NaN
