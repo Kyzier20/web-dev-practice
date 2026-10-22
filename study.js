@@ -1,4 +1,4 @@
-const studyInput = document.querySelector('#study');
+const studyInput = document.querySelector('#studyTime');
 const checkButton = document.querySelector('#checkButton');
 const result = document.querySelector('#result');
 checkButton.addEventListener('click', function() {
@@ -9,19 +9,15 @@ checkButton.addEventListener('click', function() {
     console.log("Button clicked!");
     console.log(studyTime);
 
-    if (studyTime >= 2 && studyTime <= 4) {
-        result.textContent = "You can RSVP!";
+    if (studyTime < 25) {
+        result.textContent = "Keep going!";
+    } else if (studyTime >= 25 && studyTime <= 49) {
+        result.textContent = "Take a 5-minute break.";
+    } else if (studyTime >= 50 && studyTime <= 89) {
+        result.textContent = "Take a 10-minute break.";
+    } else if (studyTime >= 90) {
+        result.textContent = "Take a longer break and recharge.";
     } else {
-        result.textContent = "You can't RSVP.";
-    }
-
-    if (rawGuests === "" || guests < 0) {
-        result.textContent = "Please enter a valid number of guests.";
-    } else if (status === "yes" && guests <= 6) {
-        result.textContent = "You can RSVP!";
-    }else if (status === "yes") {
-        result.textContent = "You may bring up to 6 guests.";
-    } else { 
-        result.textContent = "This event is for students only.";
+        result.textContent = "Please enter a valid number of minutes.";
     }
 });
