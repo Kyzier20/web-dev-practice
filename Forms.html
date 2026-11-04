@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Contact and Interest Form </title>
+    </head>
+    <body>
+        <section>
+            <form id="interestForm" novalidate>
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+                <br>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email">
+                <br>
+                <br>
+                <label for="interest">Interest:</label>
+                <select id="interest">
+                    <option value="">Choose an interest</option>
+                    <option value="volunteer">Volunteering</option>
+                    <option value="events">Events</option>
+                    <option value="mentoring">Mentoring</option>
+                </select>
+                <br>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+
+            <p id="result" role="status"></p>
+
+        </section>
+        <script src="interest.js"></script>
+    </body>
+</html>
